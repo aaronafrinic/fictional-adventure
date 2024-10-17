@@ -70,5 +70,5 @@ jobs:
           path: './out'
 
       - name: deploy
-        uses: action/deploy-pages@v4
+        uses: actions/deploy-pages@v4
           
