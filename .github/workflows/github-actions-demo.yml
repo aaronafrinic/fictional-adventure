@@ -5,7 +5,7 @@ on:
       name:
         description: 'Enter name here'
         required: true
-        default: 'GitHub user'
+        default: 'GitHub User'
 
       deploy: 
         description: 'Deploy code to production after build (yes/no)'
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo 'Name - ${{ github.event.unputs.name }}'
+      - run: echo 'Name - ${{ github.event.inputs.name }}'
       - run: echo 'Deploy - ${{ github.event.inputs.deploy }}'
 
     # Display the event that triggered the workflow
