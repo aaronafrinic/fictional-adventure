@@ -1,0 +1,28 @@
+name: GitHub Actions Demo
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Enter name here'
+        required: true
+        default: 'GitHub user'
+
+      deploy: 
+        description: 'Deploy code to production after build (yes/no)'
+        required: false
+        default: 'yes'
+      
+      
+
+jobs: 
+  Example-Action-Job:
+    name: Exploring GitHub Actions
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo 'Name - ${{ github.event.unputs.name }}'
+      - run: echo 'Deploy - ${{ github.event.inputs.deploy }}'
+
+    # Display the event that triggered the workflow
+      - run: echo 'The job was triggered  by ${{ github.event.name }} event.'
+  
