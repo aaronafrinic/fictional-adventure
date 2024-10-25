@@ -1,0 +1,27 @@
+name: first-pipelines
+on: push
+
+jobs: 
+  job1:
+    name: Job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step1
+        uses: actions/checkout@v4
+      - run: env | sort
+    
+  job2:
+    name: Job2
+    runs-on: windows-latest
+
+    steps:
+      - name: Step1
+        uses: actions/checkout@v4
+
+      - run: "Get-ChildItem Env: | Sort-Object Name"
+
+        
+
+    
+    
