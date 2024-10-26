@@ -23,6 +23,14 @@ jobs:
 
       - name: Step 2
         run: "Get-ChildItem Env: | Sort-Object Name"
+  job3:
+    needs: [job1, job2]
+    name: Job3
+    runs-on: macos-latest
+
+    steps:
+      - run: date
+      
 
         
 
